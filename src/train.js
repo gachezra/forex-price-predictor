@@ -87,6 +87,9 @@ async function main() {
     const prediction = denormalizeData(normalizedPrediction, mean, std);
     console.log('Prediction shape:', prediction.shape);
     
+    const timesUp = new Date();
+
+    console.log('Time of prediction: ', timesUp); 
     console.log('Predicted next close price:', prediction.dataSync()[0]);
   } catch (error) {
     console.error('A training error occurred:', error);
